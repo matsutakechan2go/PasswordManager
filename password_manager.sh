@@ -11,7 +11,15 @@ case $select in
   echo  "ユーザー名を入力してください:"
   read  user | >> user.txt
   echo  "パスワードを入力してください:"
-  read  pass | >> pass.txt ;;
+  read  pass | >> pass.txt 
+  ;;
 "Get Password" )
   echo  "サービス名を入力してください:"
-echo  "Thank you!"
+  grep
+  ;;
+"Exit" )
+  echo  "Thank you!"
+  ;;
+  * )
+  echo  "入力が間違えています。Add Password/Get Password/Exit から入力してください。" 
+  ;;
