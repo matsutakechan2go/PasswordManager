@@ -7,19 +7,25 @@ read  select
 case $select in
 "Add Password" )  
   echo  "サービス名を入力してください:"
-  read  service | >> service.txt
+  read  service 
+  echo "$service" >> service.txt
   echo  "ユーザー名を入力してください:"
-  read  user | >> user.txt
+  read  user 
+  echo "$user" >> user.txt
   echo  "パスワードを入力してください:"
-  read  pass | >> pass.txt 
+  read  pass 
+  echo "$pass">> pass.txt 
+
+  echo "$service:$user:$pass"  >> index
   ;;
 "Get Password" )
   echo  "サービス名を入力してください:"
-  grep
+  read svcName |
+  grep '$svcName' service.txt 
   ;;
 "Exit" )
   echo  "Thank you!"
   ;;
-  * )
-  echo  "入力が間違えています。Add Password/Get Password/Exit から入力してください。" 
-  ;;
+  '*' )
+  echo  "入力が間違えています。Add Password/Get Password/Exit から入力してください。" ;;
+  
