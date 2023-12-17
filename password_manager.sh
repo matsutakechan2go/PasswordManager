@@ -31,7 +31,7 @@ do
     # サービス名が登録されてた場合（実装前）
     if grep "$Getsvc" index.txt; then #ifの条件式としての作用を直接使用するから[]は用いない
       grep "$Getsvc" index.txt | 
-      echo "サービス名: \nユーザー名: \nパスワード:" #？？？
+      echo "サービス名: \nユーザー名: \nパスワード:" #どうすればいいんだこれ
 
     #されてなかった場合
     else
